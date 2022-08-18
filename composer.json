@@ -4,9 +4,7 @@
     "type": "library",
     "license": "Apache-2.0",
     "autoload": {
-		"autoload": {
-			"files": ["src/SmsLengthCalculator.php"]
-		}
+		"files": ["src/SmsLengthCalculator.php"]
     },
     "authors": [
         {
@@ -14,6 +12,8 @@
             "email": "joseomaker@gmail.com"
         }
     ],
-    "minimum-stability": "RC",
-    "require": {}
+	
+    "require": {
+        "php": ">=7.4"
+	}
 }
