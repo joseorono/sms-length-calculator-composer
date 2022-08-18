@@ -1,20 +1,25 @@
 # SMS Length Calculator
-Free SMS length calculator for different programming languages.
+PHP-based SMS length calculator. Checks if a message can be sent as GSM 7bit charset or if Unicode charset must be used. 
+
+Based on [messente/sms-length-calculator](https://github.com/messente/sms-length-calculator/)
+Now Composer-friendly.
 
 Checks if a message can be sent as GSM 7bit charset or if Unicode charset must be used.
 
-## Java
-Usage example
-```Java
-SmsLengthCalculator calc = new SmsLengthCalculator();
-String txt = "The morpheme can be reduplicated to emphasize the meaning of the word";
-int sms_parts = calc.getPartCount(txt);
-System.out.println("Message with text ["+txt+"] is sent as ["+sms_parts+" SMS]");
+## How Install
+
+Just run the following command in your Composer PHP project: 
+
+```
+composer require joseorono/sms-length-calculator-composer
 ```
 
 
-## PHP
-Usage example
+Composer Package:
+https://packagist.org/packages/joseorono/sms-length-calculator-composer
+
+## Usage example
+
 ```PHP
 $SmsCalc = new SmsLengthCalculator();
 $text = "The morpheme can be reduplicated to emphasize the meaning of the word";
@@ -23,11 +28,3 @@ echo "Message with text [".$text."] is sent as [".$sms_parts." SMS]\n";
 // Output: Message with text [The morpheme can be reduplicated to emphasize the meaning of the word] is sent as [1 SMS]
 ```
 
-
-## Scala
-Usage example
-```Scala
-val txt: String = "The morpheme can be reduplicated to emphasize the meaning of the word"
-val smsParts: Int  = SmsLengthCalculator.getPartCount(txt)
-println("Message with text ["+txt+"] is sent as ["+smsParts+" SMS]")
-```
